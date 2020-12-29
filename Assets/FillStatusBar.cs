@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class FillStatusBar : MonoBehaviour
-{    // Testing GitHub
+{    
     public CharacterHealt playerHealt;
     public Image fillImage;
 
