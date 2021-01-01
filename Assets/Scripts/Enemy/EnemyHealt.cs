@@ -16,7 +16,7 @@ public class EnemyHealt : MonoBehaviour
     public void EnemyTakeDamage(int damage)
     {  // Enemy taking damage             
         healt -= damage;       
-        //animator.SetTrigger("guardHurt");
+        //animator.SetTrigger("enemyHurt");
         shake.CamShake();
         Debug.Log("Enemy Take Damage !!  : " + damage);
 
@@ -24,7 +24,7 @@ public class EnemyHealt : MonoBehaviour
         {     // Enemy dead  
             GetComponent<EnemyAI>().enabled = false;
             Debug.Log("Guard Dead !!");
-            animator.SetTrigger("guardDead");
+            animator.SetTrigger("enemyDead");
             Destroy (this.gameObject,1f);
         }       
     }
