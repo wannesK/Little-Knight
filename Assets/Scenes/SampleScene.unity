@@ -250,10 +250,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -1329,8 +1329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 205.70001, y: -53.5}
-  m_SizeDelta: {x: 221.48883, y: 38.919556}
+  m_AnchoredPosition: {x: 279, y: -106}
+  m_SizeDelta: {x: 254.29706, y: 49.172134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669355524
 MonoBehaviour:
@@ -1570,7 +1570,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -0.20999146, y: 0}
+  m_AnchoredPosition: {x: -0.20996094, y: 0}
   m_SizeDelta: {x: -10.426559, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &867769797
@@ -2651,6 +2651,22 @@ CompositeCollider2D:
         Y: -49687500
       - X: 210000000
         Y: -30000000
+      - X: -29428457
+        Y: -30000000
+      - X: -29799923
+        Y: -29349932
+      - X: -29399885
+        Y: -30050002
+      - X: -29399942
+        Y: -30050102
+      - X: -42700028
+        Y: -30050102
+      - X: -42700077
+        Y: -30050072
+      - X: -42800100
+        Y: -29850018
+      - X: -42725112
+        Y: -30000000
   m_CompositePaths:
     m_Paths:
     - - {x: -11.085942, y: -5}
@@ -2752,6 +2768,10 @@ CompositeCollider2D:
       - {x: 20.914068, y: -4.9999986}
       - {x: 21, y: -4.968731}
       - {x: 20.999971, y: -3}
+      - {x: -2.9428174, y: -3.0000496}
+      - {x: -2.9400513, y: -3.0050101}
+      - {x: -4.2700152, y: -3.0049925}
+      - {x: -4.272528, y: -3}
       - {x: -11.968759, y: -3.0000076}
       - {x: -12, y: -3.0312607}
       - {x: -11.999984, y: -4.968757}
@@ -3562,7 +3582,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1689519826
 MonoBehaviour:
   m_ObjectHideFlags: 0
