@@ -67,13 +67,13 @@ public class EnemyAI : MonoBehaviour
         if (cooling)
         {
             Cooldown();
-            anim.SetBool("guardAttack", false);
+            anim.SetBool("enemyAttack", false);
         }
     }
 
     void Move()
     {
-        anim.SetBool("guardRun", true);
+        anim.SetBool("enemyRun", true);
 
         if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
         {
@@ -88,8 +88,8 @@ public class EnemyAI : MonoBehaviour
         timer = intTimer; //Reset Timer when Player enter Attack Range
         attackMode = true; //To check if Enemy can still attack or not
 
-        anim.SetBool("guardRun", false);
-        anim.SetBool("guardAttack", true);
+        anim.SetBool("enemyRun", false);
+        anim.SetBool("enemyAttack", true);
     }
 
     void Cooldown()
@@ -107,7 +107,7 @@ public class EnemyAI : MonoBehaviour
     {
         cooling = false;
         attackMode = false;
-        anim.SetBool("guardAttack", false);
+        anim.SetBool("enemyAttack", false);
     }
 
     public void TriggerCooling()
