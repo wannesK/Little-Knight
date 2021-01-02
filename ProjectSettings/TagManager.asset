@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - ScreenShake
   - hitbox
+  - EnemyRunner
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Platform
   - Enemy
   - Player
-  - 
+  - EnemyRunner
   - 
   - 
   - 

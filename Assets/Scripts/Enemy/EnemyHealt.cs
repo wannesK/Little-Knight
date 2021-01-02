@@ -17,18 +17,27 @@ public class EnemyHealt : MonoBehaviour
     public void EnemyTakeDamage(int damage)
     {  // Enemy taking damage             
         healt -= damage;       
-        animator.SetTrigger("enemyHurt");
         shake.CamShake();
         GameObject effectClone = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effectClone, 1f);        
+        Destroy(effectClone, 1f);
+        animator.SetTrigger("enemyHurt");
         Debug.Log("Enemy Take Damage !!  : " + damage);
 
-        if (healt <= 0)
-        {     // Enemy dead  
-            GetComponent<EnemyAI>().enabled = false;
-            Debug.Log("Guard Dead !!");
+        if (healt <= 0 && gameObject.tag == "Enemy")
+        {   // Enemys DEAD  
             animator.SetTrigger("enemyDead");
-            Destroy (this.gameObject,1f);
-        }       
+            GetComponent<EnemyAI>().enabled = false;              
+            Destroy(this.gameObject, 1f);
+            Debug.Log("ENEMY Dead !!");
+        }
+        if (healt <= 0 && gameObject.tag == "EnemyRunner")
+        {   // Runner DEAD
+            animator.SetTrigger("enemyDead");
+            GetComponent<EnnemyFollow>().enabled = false;
+            transform.GetChild(0).gameObject.SetActive(false);
+            Destroy(this.gameObject, 1f);
+            Debug.Log("ENEMY Dead !!");
+        }
+
     }
 }
