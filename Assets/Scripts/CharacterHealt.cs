@@ -9,17 +9,21 @@ public class CharacterHealt : MonoBehaviour
     public float enemyDamage;
 
     public CharacterAnimationController anim;
+
+    private Shake shake; // Camera Shake
     private void Awake()
     {
         anim.GetComponent<CharacterAnimationController>();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
     }
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (other.gameObject.name == "hitbox")
+        if (collision.gameObject.tag == "hitbox")
         { // Taking damage
             playerCurrentHealt -= enemyDamage;
             anim.PlayHurtAnim();
-            Debug.Log("Player take damage   :" + enemyDamage);
+            shake.CamShake();           
+            Debug.Log("Player take damage   :" + enemyDamage);           
 
             if (playerCurrentHealt <= 0)
             {   // Player dead  

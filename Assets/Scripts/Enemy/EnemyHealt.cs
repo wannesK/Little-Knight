@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealt : MonoBehaviour
 {
     public int healt;
+    public GameObject hitEffect;
     
     private Shake shake; // Camera Shake
     private Animator animator;
@@ -16,8 +17,10 @@ public class EnemyHealt : MonoBehaviour
     public void EnemyTakeDamage(int damage)
     {  // Enemy taking damage             
         healt -= damage;       
-        //animator.SetTrigger("enemyHurt");
+        animator.SetTrigger("enemyHurt");
         shake.CamShake();
+        GameObject effectClone = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effectClone, 1f);        
         Debug.Log("Enemy Take Damage !!  : " + damage);
 
         if (healt <= 0)
