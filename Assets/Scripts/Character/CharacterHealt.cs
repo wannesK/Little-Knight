@@ -18,7 +18,7 @@ public class CharacterHealt : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "hitbox")
+        if (collision.gameObject.CompareTag("EnemyHitbox"))
         { // Taking damage
             playerCurrentHealt -= enemyDamage;
             anim.PlayHurtAnim();

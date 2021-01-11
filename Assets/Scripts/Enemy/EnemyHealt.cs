@@ -23,14 +23,14 @@ public class EnemyHealt : MonoBehaviour
         animator.SetTrigger("enemyHurt");
         Debug.Log("Enemy Take Damage !!  : " + damage);
 
-        if (healt <= 0 && gameObject.tag == "Enemy")
+        if (healt <= 0 && gameObject.CompareTag("Enemy"))
         {   // Enemys DEAD  
             animator.SetTrigger("enemyDead");
             GetComponent<EnemyAI>().enabled = false;              
             Destroy(this.gameObject, 1f);
             Debug.Log("ENEMY Dead !!");
         }
-        if (healt <= 0 && gameObject.tag == "EnemyRunner")
+        if (healt <= 0 && gameObject.CompareTag("EnemyRunner"))
         {   // Runner DEAD
             animator.SetTrigger("enemyDead");
             GetComponent<EnnemyFollow>().enabled = false;
