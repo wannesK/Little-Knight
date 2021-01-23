@@ -9,6 +9,7 @@ TagManager:
   - ScreenShake
   - EnemyRunner
   - EnemyHitbox
+  - Water
   layers:
   - Default
   - TransparentFX

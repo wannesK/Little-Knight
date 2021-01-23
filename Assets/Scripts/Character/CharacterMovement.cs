@@ -28,8 +28,7 @@ public class CharacterMovement : MonoBehaviour
     public MovementStates movementState;
     public FacingDirection facingDirection;
 
-   
-    private SpriteRenderer spriteRenderer;
+    
     private Rigidbody2D rigidBody2D;    
     private BoxCollider2D boxCollider2D;
     private CharacterAnimationController animController;
@@ -38,7 +37,6 @@ public class CharacterMovement : MonoBehaviour
     {
         rigidBody2D = GetComponent<Rigidbody2D>();
         boxCollider2D = GetComponent<BoxCollider2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
         animController = GetComponent<CharacterAnimationController>();      
     }
 
@@ -169,8 +167,6 @@ public class CharacterMovement : MonoBehaviour
                 break;
         }
     }
-      
-    
 
 }
 
