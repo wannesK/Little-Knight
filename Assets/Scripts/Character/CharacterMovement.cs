@@ -43,15 +43,13 @@ public class CharacterMovement : MonoBehaviour
     private void Update()
     {
         HandleJumping();
-       
     }
     private void FixedUpdate()
     {
         HandleMovement();
         SetCharacterState();
         SetCharacterDirection();
-        PlayAnimationsBasedOnState();
-        
+        PlayAnimationsBasedOnState();        
     }
 
     /// <summary>
@@ -97,7 +95,7 @@ public class CharacterMovement : MonoBehaviour
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider2D.bounds.center,
             boxCollider2D.bounds.size, 0f, Vector2.down,
             isGroundedRayLength, platformLayerMask);
-        return raycastHit2D.collider != null;
+        return raycastHit2D.collider != null;    
     }
 
     /// <summary>
@@ -167,6 +165,6 @@ public class CharacterMovement : MonoBehaviour
                 break;
         }
     }
-
+    
 }
 
