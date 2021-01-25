@@ -11,6 +11,7 @@ TagManager:
   - EnemyHitbox
   - Water
   - MovingPlatform
+  - GameMaster
   layers:
   - Default
   - TransparentFX
