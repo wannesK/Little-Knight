@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SlowMotion : MonoBehaviour
 {
-    // Start is called before the first frame update
+
     float currentAmount = 0f;
     float maxAmount = 5f;
 
-    // Use this for initialization
+
     void Start()
     {
         Time.timeScale = 1.0f;
