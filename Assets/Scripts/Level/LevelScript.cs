@@ -29,9 +29,14 @@ public class LevelScript : MonoBehaviour
         PlayerPrefs.DeleteAll();
         Debug.Log("Levels Reseted");
     }
-    public void PlayButton()
+    public void LoadLevelSelect()
     {
-        SceneManager.LoadScene("LevelSellect");
+        SceneManager.LoadScene("LevelSelect");
+    }
+    public void LoadMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
     }
     public void QuitGame()
     {
