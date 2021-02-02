@@ -21,7 +21,7 @@ public class LevelScript : MonoBehaviour
             PlayerPrefs.SetInt("levelUnlocked",currentlevel);
         }
         Debug.Log("LEVEL" + PlayerPrefs.GetInt("levelUnlocked") + "UNLOCKED");
-        SceneManager.LoadScene("LevelSellect");
+        SceneManager.LoadScene("LevelSelect");
     }
 
     public void ResetLevels()
