@@ -21,16 +21,16 @@ public class CharacterHealt : MonoBehaviour
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
     }
-    void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D other)
     {
         
-        if (collision.gameObject.CompareTag("EnemyHitbox"))
+        if (other.CompareTag("EnemyHitbox"))
         { // Taking damage
             playerCurrentHealt -= enemyDamage;
             anim.PlayHurtAnim();
             shake.CamShake();                          
         }
-        else if (collision.gameObject.CompareTag("Water"))
+        else if (other.CompareTag("Water"))
         {
             rigid.velocity = Vector2.up * 12;
             playerCurrentHealt -= enemyDamage;
