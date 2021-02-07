@@ -8,7 +8,7 @@ public class CameraController : MonoBehaviour
     public float followSpeed;
     public float minX, maxX;
     public float minY, maxY;
-  
+
     void Update()
     {
         Vector3 nextPos = new Vector3(Mathf.Clamp(player.position.x, minX, maxX),
