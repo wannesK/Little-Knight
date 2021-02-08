@@ -2,6 +2,7 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
+using UnityEngine.Networking;
 
 public class ScoreManager : MonoBehaviour
 {  
@@ -10,13 +11,14 @@ public class ScoreManager : MonoBehaviour
     public GameData data;
 
     private BinaryFormatter binaryFormatter;
-    private string saveFile;
+    private string filePath;
     private void Awake()
     {
         if (instance == null)
             instance = this;
         binaryFormatter = new BinaryFormatter();
-        saveFile = Application.persistentDataPath + "/game.data";
+        filePath = Application.persistentDataPath + "/game.data";
+        Debug.Log(filePath);
     }
 
     public void Start()
@@ -41,26 +43,31 @@ public class ScoreManager : MonoBehaviour
 
     public void SaveData()
     {
-        FileStream fileStream = new FileStream(saveFile, FileMode.Create);
+        FileStream fileStream = new FileStream(filePath, FileMode.Create);
         binaryFormatter.Serialize(fileStream, data);
         fileStream.Close();
+        Debug.Log("Data Saved");
     }
 
     public void LoadData()
     {
-        if (File.Exists(saveFile))
+        if (File.Exists(filePath))
         {
-            FileStream fileStream = new FileStream(saveFile, FileMode.Open);
+            FileStream fileStream = new FileStream(filePath, FileMode.Open);
             data = (GameData)binaryFormatter.Deserialize(fileStream);
             coinText.text = " " + data.coin;
             fileStream.Close();
+            Debug.Log("Data loaded");
         }
-
+        else
+        {
+            Debug.LogError("Save File Not Found " + filePath);          
+        }
     }
 
     public void DeleteData()
     {
-        FileStream fileStream = new FileStream(saveFile, FileMode.Create);
+        FileStream fileStream = new FileStream(filePath, FileMode.Create);
         data.coin = 0;
         coinText.text = "0";
         binaryFormatter.Serialize(fileStream, data);
@@ -69,7 +76,28 @@ public class ScoreManager : MonoBehaviour
 
     private void OnEnable()
     {
-        LoadData();
+        DatabaseControl();
+    }
+  
+    private void DatabaseControl()
+    {
+        if (!File.Exists(filePath))
+        {
+            #if UNITY_ANDROID
+            string file = Path.Combine(Application.streamingAssetsPath, "game.data");
+            WWW data = new WWW(file);
+            while (!data.isDone)
+            {
+
+            }
+            File.WriteAllBytes(filePath, data.bytes);
+            LoadData();
+            #endif
+        }
+        else
+        {
+            LoadData();
+        }
     }
     private void OnDisable()
     {
