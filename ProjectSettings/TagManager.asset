@@ -12,6 +12,7 @@ TagManager:
   - Water
   - MovingPlatform
   - GameMaster
+  - LevelEnd
   layers:
   - Default
   - TransparentFX
