@@ -28,7 +28,9 @@ public class CharacterMovement : MonoBehaviour
     public MovementStates movementState;
     public FacingDirection facingDirection;
 
-    
+
+    private bool mobileLeft, mobileRight;
+
     private Rigidbody2D rigidBody2D;    
     private BoxCollider2D boxCollider2D;
     private CharacterAnimationController animController;
@@ -58,14 +60,14 @@ public class CharacterMovement : MonoBehaviour
     private void HandleMovement()
     {
         rigidBody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A)|| mobileLeft)
         {
             rigidBody2D.velocity = new Vector2(-movementSpeed, rigidBody2D.velocity.y);
             
         }
         else
         {
-            if (Input.GetKey(KeyCode.D))
+            if (Input.GetKey(KeyCode.D) || mobileRight)
             {
                 rigidBody2D.velocity = new Vector2(+movementSpeed, rigidBody2D.velocity.y);
             }
@@ -166,5 +168,30 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     
+    /// <summary>
+    ///              MOBILE CONTROLS
+    /// </summary>
+    public void MobileLeftTrue()
+    {
+        mobileLeft = true;
+        mobileRight = false;
+    }
+    public void MobileRightTrue()
+    {
+        mobileRight = true;
+        mobileLeft = false;
+    }
+    public void MobileStop()
+    {
+        mobileLeft = false;
+        mobileRight = false;
+    }
+    public void MobileJump()
+    {
+        if (IsGrounded())
+        {
+            rigidBody2D.velocity = Vector2.up * jumpForce;
+        }     
+    }
 }
 

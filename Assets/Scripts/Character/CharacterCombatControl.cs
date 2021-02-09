@@ -18,6 +18,7 @@ public class CharacterCombatControl : MonoBehaviour
     public float startTimeBetwAttack; // Delay between strikes
     private float timeBetwAttack;
 
+    private bool mobileBasicAttack, mobileStrike;
     private CharacterAnimationController animator;
 
     private void Awake()
@@ -37,7 +38,7 @@ public class CharacterCombatControl : MonoBehaviour
     {
         if (timeBtwAttack <= 0)
         {    
-            if (Input.GetKeyDown(KeyCode.LeftControl))
+            if (Input.GetKeyDown(KeyCode.LeftControl) || mobileBasicAttack)
             {                
                 animator.PlayBasicAttackAnim();
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
@@ -60,9 +61,9 @@ public class CharacterCombatControl : MonoBehaviour
     /// </summary>
     public void Strike()
     {
-        if (timeBetwAttack <= 0 && timeBtwAttack <= 0 )
+        if (timeBetwAttack <= 0 && timeBtwAttack <= 0)
         {   
-            if (Input.GetKeyDown(KeyCode.RightControl))
+            if (Input.GetKeyDown(KeyCode.RightControl) || mobileStrike)
             {
                 animator.PlayStrikeAnim();
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
@@ -89,5 +90,23 @@ public class CharacterCombatControl : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    /// <summary>
+    ///             MOBILE CONTROLS
+    /// </summary>
+    public void MobileBasicAttack()
+    {
+        mobileBasicAttack = true;
+    }
+    public void MobileStrike()
+    {
+        mobileStrike = true;
+    }
+
+    public void MobileAttackFalse()
+    {
+        mobileBasicAttack = false;
+        mobileStrike = false;
     }
 }

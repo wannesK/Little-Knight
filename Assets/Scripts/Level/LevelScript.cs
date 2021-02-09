@@ -5,6 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class LevelScript : MonoBehaviour
 {
+    private GameMaster gm;
+    private void Start()
+    {
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.End))
@@ -21,7 +26,7 @@ public class LevelScript : MonoBehaviour
             PlayerPrefs.SetInt("levelUnlocked",currentlevel);
         }
         Debug.Log("LEVEL" + PlayerPrefs.GetInt("levelUnlocked") + "UNLOCKED");
-        SceneManager.LoadScene("LevelSelect");
+        LoadLevelSelect();
     }
 
     public void ResetLevels()
@@ -32,11 +37,13 @@ public class LevelScript : MonoBehaviour
     public void LoadLevelSelect()
     {
         SceneManager.LoadScene("LevelSelect");
+        gm.lastCheckPointPos = new Vector2(-3, 0);
     }
     public void LoadMenu()
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+        gm.lastCheckPointPos = new Vector2(-3, 0);
     }
     public void QuitGame()
     {
