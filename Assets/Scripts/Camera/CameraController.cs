@@ -9,6 +9,12 @@ public class CameraController : MonoBehaviour
     public float minX, maxX;
     public float minY, maxY;
 
+    private GameMaster gm;
+    private void Awake()
+    {
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
+        transform.position = gm.lastCheckPointPos;
+    }
     void Update()
     {
         Vector3 nextPos = new Vector3(Mathf.Clamp(player.position.x, minX, maxX),
