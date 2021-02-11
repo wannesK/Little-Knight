@@ -38,7 +38,7 @@ public class ScoreManager : MonoBehaviour
     public void CoinCounter()
     {
         data.coin += Random.Range(3,8);
-        coinText.text = "" + data.coin;
+        coinText.text = data.coin.ToString();
     }
 
     public void SaveData()

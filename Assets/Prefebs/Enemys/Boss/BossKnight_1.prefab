@@ -123,18 +123,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2233122, y: 0.7788737}
+  m_Offset: {x: 0.22331214, y: 0.6390047}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 18, y: 10}
+    oldSize: {x: 18.028168, y: 9.999999}
     newSize: {x: 18, y: 10}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.8110447, y: 5.009571}
+  m_Size: {x: 2.8110447, y: 4.729833}
   m_EdgeRadius: 0
 --- !u!95 &5858230927821795096
 Animator:
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healt: 500
+  healt: 600
   hitEffect: {fileID: 0}
 --- !u!114 &5858230927821795094
 MonoBehaviour:
@@ -181,9 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01502ae1140e3d849b6289f0a7e78d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 2.6
+  attackDistance: 3
   moveSpeed: 3
-  timer: 1
+  timer: 0.7
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
   followZone: {fileID: 5858230929186267678}
