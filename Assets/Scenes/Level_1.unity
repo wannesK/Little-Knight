@@ -556,6 +556,7 @@ GameObject:
   - component: {fileID: 44259720}
   - component: {fileID: 44259724}
   - component: {fileID: 44259725}
+  - component: {fileID: 44259726}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -673,6 +674,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 121100823}
   touchControlUI: {fileID: 769281796}
+--- !u!114 &44259726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 44259719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38a4137147202264ab17a46fc5a442c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countDownText: {fileID: 3818813934214940508}
+  strikeButton: {fileID: 3818813934214940507}
 --- !u!1 &59573460
 GameObject:
   m_ObjectHideFlags: 0
@@ -30226,6 +30241,41 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3445556067165840312}
+    - target: {fileID: 4097305649114188968, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097305649114188968, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097305649114188968, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097305649114188968, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 44259726}
+    - target: {fileID: 4097305649114188968, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountDown
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097305649114188968, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5637862426386317340, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5960083882857028269, guid: 35aa22df0a3aa7040871ac09ca409166,
         type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -30246,6 +30296,35 @@ PrefabInstance:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MobileAttackFalse
       objectReference: {fileID: 0}
+    - target: {fileID: 8753146300509760218, guid: 35aa22df0a3aa7040871ac09ca409166,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 710375389682550918, guid: 35aa22df0a3aa7040871ac09ca409166, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 35aa22df0a3aa7040871ac09ca409166, type: 3}
+--- !u!114 &3818813934214940507 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4097305649114188968, guid: 35aa22df0a3aa7040871ac09ca409166,
+    type: 3}
+  m_PrefabInstance: {fileID: 3818813934214940506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3818813934214940508 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5637862426386317340, guid: 35aa22df0a3aa7040871ac09ca409166,
+    type: 3}
+  m_PrefabInstance: {fileID: 3818813934214940506}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
