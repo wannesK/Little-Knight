@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healt: 180
+  healt: 300
   hitEffect: {fileID: 0}
 --- !u!114 &7431082780602305839
 MonoBehaviour:
@@ -238,8 +238,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01502ae1140e3d849b6289f0a7e78d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 2.2
-  moveSpeed: 2
+  attackDistance: 2.1
+  moveSpeed: 2.5
   timer: 1
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
