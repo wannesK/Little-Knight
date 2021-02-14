@@ -45,6 +45,10 @@ public class LevelScript : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         gm.lastCheckPointPos = new Vector2(-3, 0);
     }
+    public void LoadPlayerStats()
+    {
+        SceneManager.LoadScene("PlayerStats");
+    }
     public void QuitGame()
     {
         Application.Quit();

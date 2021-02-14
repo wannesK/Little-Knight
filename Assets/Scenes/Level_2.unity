@@ -8874,7 +8874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b937eb7d2bb1b874083ba466e641d907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastCheckPointPos: {x: -6.93, y: -0.75}
+  lastCheckPointPos: {x: -3, y: 0}
 --- !u!4 &625793660
 Transform:
   m_ObjectHideFlags: 0
@@ -10207,7 +10207,7 @@ RectTransform:
   - {fileID: 838281071}
   - {fileID: 848218058}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15403,7 +15403,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!1 &725575744
 GameObject:
@@ -21873,7 +21873,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1087876589
 GameObject:
@@ -22741,7 +22741,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1146631978
 GameObject:
@@ -24721,8 +24721,8 @@ GameObject:
   - component: {fileID: 1195803512}
   - component: {fileID: 1195803511}
   - component: {fileID: 1195803510}
-  - component: {fileID: 1195803509}
   - component: {fileID: 1195803508}
+  - component: {fileID: 1195803509}
   m_Layer: 10
   m_Name: Character
   m_TagString: Player
@@ -24754,9 +24754,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cee9734ab38cf54ba009a2ba607b155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealt: 10
-  playerCurrentHealt: 10
-  enemyDamage: 2
+  playerCurrentHealt: 0
+  enemyDamage: 20
   anim: {fileID: 1195803511}
 --- !u!114 &1195803510
 MonoBehaviour:
@@ -24956,7 +24955,7 @@ Transform:
   m_Children:
   - {fileID: 538847654}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1196882889
 GameObject:
@@ -57017,7 +57016,7 @@ GameObject:
   - component: {fileID: 1944470757}
   m_Layer: 0
   m_Name: ScoreManager
-  m_TagString: Untagged
+  m_TagString: Data
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57034,10 +57033,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee2192daa6744949a5b586b0759fff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 227944394}
   data:
     coin: 0
-    firstLoading: 0
+    dataAttackDamage: 0
+    dataStrikeDamage: 0
+    playerMaxHealt: 0
+  coinText: {fileID: 227944394}
 --- !u!4 &1944470758
 Transform:
   m_ObjectHideFlags: 0

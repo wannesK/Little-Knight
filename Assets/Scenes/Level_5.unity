@@ -7306,7 +7306,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b937eb7d2bb1b874083ba466e641d907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lastCheckPointPos: {x: 353.25, y: 9}
+  lastCheckPointPos: {x: -3, y: 0}
 --- !u!4 &398343624
 Transform:
   m_ObjectHideFlags: 0
@@ -7315,7 +7315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398343622}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.833317, y: 2.4385207, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -64106,7 +64106,7 @@ GameObject:
   - component: {fileID: 1680634887}
   m_Layer: 0
   m_Name: ScoreManager
-  m_TagString: Untagged
+  m_TagString: Data
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64123,10 +64123,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee2192daa6744949a5b586b0759fff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 1389063588}
   data:
     coin: 0
-    firstLoading: 0
+    dataAttackDamage: 0
+    dataStrikeDamage: 0
+    playerMaxHealt: 0
+  coinText: {fileID: 1389063588}
 --- !u!4 &1680634888
 Transform:
   m_ObjectHideFlags: 0
@@ -68167,9 +68169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cee9734ab38cf54ba009a2ba607b155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealt: 10
-  playerCurrentHealt: 10
-  enemyDamage: 2
+  playerCurrentHealt: 0
+  enemyDamage: 20
   anim: {fileID: 1839666525}
 --- !u!114 &1839666524
 MonoBehaviour:

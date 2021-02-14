@@ -8,22 +8,26 @@ public class CharacterCombatControl : MonoBehaviour
     [Header("Basic Attack Settings")]
     public Transform attackPos;
     public LayerMask whatIsEnemies;   
-    public int basicAttackDamage;        
+    public int basicAttackDamage = 0;        
     public float startTimeBtwAttack;  // Delay between normal attacks
     public float attackRange;
     private float timeBtwAttack;
 
     [Header("Strike Settings")]
-    public int strikeDamage;   
+    public int strikeDamage = 0;   
     public float startTimeBetwAttack; // Delay between strikes
     private float timeBetwAttack;
 
     private bool mobileBasicAttack, mobileStrike;
     private CharacterAnimationController animator;
-
-    private void Awake()
+    private ScoreManager scoreManager;
+    private void Start()
     {
         animator = GetComponent<CharacterAnimationController>();
+        scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
+
+        basicAttackDamage = scoreManager.data.dataAttackDamage;
+        strikeDamage = scoreManager.data.dataStrikeDamage;
     }
     
     void Update()

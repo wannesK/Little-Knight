@@ -7,11 +7,12 @@ using UnityEngine.Networking;
 public class ScoreManager : MonoBehaviour
 {  
     public static ScoreManager instance;
-    public TextMeshProUGUI coinText;
     public GameData data;
-
     private BinaryFormatter binaryFormatter;
     private string filePath;
+
+    public TextMeshProUGUI coinText;
+    
     private void Awake()
     {
         if (instance == null)
@@ -23,7 +24,12 @@ public class ScoreManager : MonoBehaviour
 
     public void Start()
     {
-        LoadGame();
+        if (data.dataAttackDamage < 39)
+        {
+            data.dataAttackDamage = 40;
+            data.dataStrikeDamage = 60;
+            data.playerMaxHealt = 100;
+        }
     }
 
     private void Update()
@@ -31,16 +37,9 @@ public class ScoreManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Delete))
         {
             DeleteData();
-            Debug.Log("Coins Deleted");
+            Debug.Log("Datas Deleted");
         }
     }
-
-    public void CoinCounter()
-    {
-        data.coin += Random.Range(3,8);
-        coinText.text = data.coin.ToString();
-    }
-
     public void SaveData()
     {
         FileStream fileStream = new FileStream(filePath, FileMode.Create);
@@ -64,16 +63,6 @@ public class ScoreManager : MonoBehaviour
             Debug.LogError("Save File Not Found " + filePath);          
         }
     }
-
-    public void DeleteData()
-    {
-        FileStream fileStream = new FileStream(filePath, FileMode.Create);
-        data.coin = 0;
-        coinText.text = "0";
-        binaryFormatter.Serialize(fileStream, data);
-        fileStream.Close();
-    }
-
     private void OnEnable()
     {
         DatabaseControl();
@@ -103,13 +92,50 @@ public class ScoreManager : MonoBehaviour
     {
         SaveData();
     }
-
-    public void LoadGame()
+    public void DeleteData()
     {
-        if (data.firstLoading)
+        FileStream fileStream = new FileStream(filePath, FileMode.Create);
+        data.coin = 0;
+        data.dataAttackDamage = 40;
+        data.dataStrikeDamage = 60;
+        data.playerMaxHealt = 100;
+        coinText.text = "0";
+        binaryFormatter.Serialize(fileStream, data);
+        fileStream.Close();
+    }
+
+    public void CoinCounter()
+    {
+        data.coin += Random.Range(3, 7);
+        coinText.text = data.coin.ToString();
+    }
+
+    public void PlayerDamageUpgrade()
+    {
+        if (data.coin >= 200)
         {
-            data.coin = 0;
-            data.firstLoading = false;
+            data.dataAttackDamage += 10;
+            data.dataStrikeDamage += 10;
+
+            data.coin -= 200;
+            coinText.text = data.coin.ToString();
+        }
+        else
+        {
+            Debug.Log("Not enough money");
+        }
+    }
+    public void PlayerHealtUpgrade()
+    {
+        if (data.coin >= 200)
+        {
+            data.playerMaxHealt += 20;
+            data.coin -= 200;
+            coinText.text = data.coin.ToString();
+        }
+        else
+        {
+            Debug.Log("Not enough money");
         }
     }
 }
@@ -117,6 +143,8 @@ public class ScoreManager : MonoBehaviour
 public class GameData
 {
     public int coin;
-    public bool firstLoading;
+    public int dataAttackDamage;
+    public int dataStrikeDamage;
+    public int playerMaxHealt;
 }
 

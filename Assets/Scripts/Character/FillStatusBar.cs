@@ -9,9 +9,11 @@ public class FillStatusBar : MonoBehaviour
     public Image fillImage;
 
     private Slider slider;
+    private ScoreManager scoreManager;
     private void Awake()
     {
         slider = GetComponent<Slider>();
+        scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
     }
    
     void Update()
@@ -20,7 +22,7 @@ public class FillStatusBar : MonoBehaviour
         {
             fillImage.enabled = false;
         }
-        float fillValue = playerHealt.playerCurrentHealt / playerHealt.playerMaxHealt;
+        float fillValue = playerHealt.playerCurrentHealt / scoreManager.data.playerMaxHealt;
         slider.value = fillValue;
     }
 }

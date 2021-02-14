@@ -1456,9 +1456,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cee9734ab38cf54ba009a2ba607b155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealt: 10
-  playerCurrentHealt: 10
-  enemyDamage: 2
+  playerCurrentHealt: 0
+  enemyDamage: 20
   anim: {fileID: 847042652}
 --- !u!114 &847042652
 MonoBehaviour:
@@ -1855,10 +1854,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee2192daa6744949a5b586b0759fff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 598902270}
   data:
     coin: 0
-    firstLoading: 0
+    dataAttackDamage: 0
+    dataStrikeDamage: 0
+    playerMaxHealt: 0
+  coinText: {fileID: 598902270}
 --- !u!4 &947581102
 Transform:
   m_ObjectHideFlags: 0

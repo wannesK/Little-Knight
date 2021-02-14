@@ -13,6 +13,7 @@ TagManager:
   - MovingPlatform
   - GameMaster
   - LevelEnd
+  - Data
   layers:
   - Default
   - TransparentFX

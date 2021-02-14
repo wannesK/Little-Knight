@@ -376,7 +376,7 @@ GameObject:
   - component: {fileID: 16152601}
   m_Layer: 0
   m_Name: ScoreManager
-  m_TagString: Untagged
+  m_TagString: Data
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,10 +393,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ee2192daa6744949a5b586b0759fff2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinText: {fileID: 1298572318}
   data:
     coin: 0
-    firstLoading: 0
+    dataAttackDamage: 40
+    dataStrikeDamage: 60
+    playerMaxHealt: 0
+  coinText: {fileID: 1298572318}
 --- !u!4 &16152602
 Transform:
   m_ObjectHideFlags: 0
@@ -4225,9 +4227,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cee9734ab38cf54ba009a2ba607b155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealt: 10
-  playerCurrentHealt: 10
-  enemyDamage: 2
+  playerCurrentHealt: 0
+  enemyDamage: 20
   anim: {fileID: 3445556067165840314}
 --- !u!1 &514762889
 GameObject:
@@ -29892,7 +29893,7 @@ MonoBehaviour:
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 2560
-  basicAttackDamage: 40
+  basicAttackDamage: 0
   startTimeBtwAttack: 0.7
   attackRange: 0.67
   strikeDamage: 60

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CharacterHealt : MonoBehaviour
 {
-    public float playerMaxHealt;
+
     public float playerCurrentHealt;
     public float enemyDamage;
 
@@ -13,13 +13,17 @@ public class CharacterHealt : MonoBehaviour
     private Rigidbody2D rigid;
     private Shake shake; // Camera Shake
     private GameMaster gm;
-    private void Awake()
+    private ScoreManager scoreManager;
+    private void Start()
     {
         anim.GetComponent<CharacterAnimationController>();
         rigid = GetComponent<Rigidbody2D>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
+
+        playerCurrentHealt = scoreManager.data.playerMaxHealt;
     }
     void OnTriggerEnter2D(Collider2D other)
     {
