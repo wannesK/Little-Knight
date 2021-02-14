@@ -2,7 +2,6 @@
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using TMPro;
-using UnityEngine.Networking;
 
 public class ScoreManager : MonoBehaviour
 {  
@@ -112,7 +111,7 @@ public class ScoreManager : MonoBehaviour
 
     public void PlayerDamageUpgrade()
     {
-        if (data.coin >= 200)
+        if (data.coin >= 200 && data.dataAttackDamage == 40)
         {
             data.dataAttackDamage += 10;
             data.dataStrikeDamage += 10;
@@ -120,6 +119,46 @@ public class ScoreManager : MonoBehaviour
             data.coin -= 200;
             coinText.text = data.coin.ToString();
         }
+        else if (data.coin >= 250 && data.dataAttackDamage == 50)
+        {
+            data.dataAttackDamage += 10;
+            data.dataStrikeDamage += 10;
+
+            data.coin -= 250;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 300 && data.dataAttackDamage == 60)
+        {
+            data.dataAttackDamage += 10;
+            data.dataStrikeDamage += 10;
+
+            data.coin -= 300;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 350 && data.dataAttackDamage == 70)
+        {
+            data.dataAttackDamage += 10;
+            data.dataStrikeDamage += 10;
+
+            data.coin -= 350;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 400 && data.dataAttackDamage == 80)
+        {
+            data.dataAttackDamage += 10;
+            data.dataStrikeDamage += 10;
+
+            data.coin -= 400;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 450 && data.dataAttackDamage == 90)
+        {
+            data.dataAttackDamage += 10;
+            data.dataStrikeDamage += 10;
+
+            data.coin -= 450;
+            coinText.text = data.coin.ToString();
+        }          
         else
         {
             Debug.Log("Not enough money");
@@ -127,10 +166,40 @@ public class ScoreManager : MonoBehaviour
     }
     public void PlayerHealtUpgrade()
     {
-        if (data.coin >= 200)
+        if (data.coin >= 200 && data.playerMaxHealt == 100)
         {
             data.playerMaxHealt += 20;
             data.coin -= 200;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 250 && data.playerMaxHealt == 120)
+        {
+            data.playerMaxHealt += 20;
+            data.coin -= 250;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 300 && data.playerMaxHealt == 140)
+        {
+            data.playerMaxHealt += 20;
+            data.coin -= 300;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 350 && data.playerMaxHealt == 160)
+        {
+            data.playerMaxHealt += 20;
+            data.coin -= 350;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 400 && data.playerMaxHealt == 180)
+        {
+            data.playerMaxHealt += 20;
+            data.coin -= 400;
+            coinText.text = data.coin.ToString();
+        }
+        else if (data.coin >= 450 && data.playerMaxHealt == 200)
+        {
+            data.playerMaxHealt += 20;
+            data.coin -= 400;
             coinText.text = data.coin.ToString();
         }
         else

@@ -47191,9 +47191,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 600
+  m_MaxValue: 500
   m_WholeNumbers: 0
-  m_Value: 600
+  m_Value: 500
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -52214,7 +52214,7 @@ PrefabInstance:
     - target: {fileID: 5858230927821795097, guid: 79c6a1f23b0ee014982b9da6618ada36,
         type: 3}
       propertyPath: healt
-      value: 600
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 5858230927821795100, guid: 79c6a1f23b0ee014982b9da6618ada36,
         type: 3}

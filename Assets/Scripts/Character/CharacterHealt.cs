@@ -18,6 +18,7 @@ public class CharacterHealt : MonoBehaviour
     {
         anim.GetComponent<CharacterAnimationController>();
         rigid = GetComponent<Rigidbody2D>();
+
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
         scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
