@@ -181,9 +181,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01502ae1140e3d849b6289f0a7e78d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 3
-  moveSpeed: 2.7
-  timer: 0.8
+  attackDistance: 2.6
+  moveSpeed: 2.3
+  timer: 1
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
   followZone: {fileID: 5858230929186267678}

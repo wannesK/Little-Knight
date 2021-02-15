@@ -365,7 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 2.7
-  moveSpeed: 2.5
+  moveSpeed: 2.4
   timer: 1
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}
@@ -385,5 +385,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healt: 600
+  healt: 550
   hitEffect: {fileID: 0}

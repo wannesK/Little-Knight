@@ -105,7 +105,7 @@ public class ScoreManager : MonoBehaviour
 
     public void CoinCounter()
     {
-        data.coin += Random.Range(3, 7);
+        data.coin += Random.Range(2, 4);
         coinText.text = data.coin.ToString();
     }
 
