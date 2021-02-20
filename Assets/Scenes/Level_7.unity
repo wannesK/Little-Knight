@@ -10204,6 +10204,7 @@ GameObject:
   m_Component:
   - component: {fileID: 230578132}
   - component: {fileID: 230578133}
+  - component: {fileID: 230578134}
   m_Layer: 0
   m_Name: dead tree 3 (13)
   m_TagString: Untagged
@@ -10275,6 +10276,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &230578134
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230578131}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.2939038, y: 2.4215412}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.502148, y: 10.976666}
+    newSize: {x: 4.502148, y: 10.976666}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.090839386, y: 8.431863}
+  m_EdgeRadius: 0
 --- !u!1 &234688200
 GameObject:
   m_ObjectHideFlags: 0
