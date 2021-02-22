@@ -45,6 +45,7 @@ public class CharacterCombatControl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.LeftControl) || mobileBasicAttack)
             {                
                 animator.PlayBasicAttackAnim();
+                MusicManager.PlaySound("Sword");
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
@@ -70,6 +71,7 @@ public class CharacterCombatControl : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.RightControl) || mobileStrike)
             {
                 animator.PlayStrikeAnim();
+                MusicManager.PlaySound("Sword");
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {

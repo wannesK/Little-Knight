@@ -21,6 +21,7 @@ public class EnemyHealt : MonoBehaviour
         GameObject effectClone = Instantiate(hitEffect, transform.position, Quaternion.identity);
         Destroy(effectClone, 1f);
         animator.SetTrigger("enemyHurt");
+        MusicManager.PlaySound("SwordImpact");
         Debug.Log("Enemy Take Damage !!  : " + damage);
 
         if (healt <= 0 && gameObject.CompareTag("Enemy"))

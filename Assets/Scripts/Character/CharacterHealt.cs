@@ -33,7 +33,8 @@ public class CharacterHealt : MonoBehaviour
         { // Taking damage
             playerCurrentHealt -= enemyDamage;
             anim.PlayHurtAnim();
-            shake.CamShake();                          
+            shake.CamShake();
+            MusicManager.PlaySound("CharacterHurt");            
         }
         else if (other.CompareTag("Water"))
         {
@@ -41,14 +42,17 @@ public class CharacterHealt : MonoBehaviour
             playerCurrentHealt -= enemyDamage;
             shake.CamShake();
             anim.PlayHurtAnim();
+            MusicManager.PlaySound("CharacterHurt");
         }
         if (playerCurrentHealt <= 0)
         {   // Player dead  
             GetComponent<CharacterMovement>().enabled = false;
             GetComponent<SlowMotion>().SlowTheTime();
+            
             anim.PlayDeadAnim();
             Invoke("RestartLastCheckPoint", 1.2f);
         }
+        
     }
     public void RestartLastCheckPoint()
     {

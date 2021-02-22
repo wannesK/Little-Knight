@@ -8,8 +8,9 @@ public class Coin : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            Destroy(this.gameObject);
+            MusicManager.PlaySound("Coin");
             ScoreManager.instance.CoinCounter();
+            Destroy(this.gameObject);           
         }
     }
 }

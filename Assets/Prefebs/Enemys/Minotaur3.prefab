@@ -309,7 +309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 1.7
-  moveSpeed: 2
+  moveSpeed: 2.5
   timer: 0.6
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}

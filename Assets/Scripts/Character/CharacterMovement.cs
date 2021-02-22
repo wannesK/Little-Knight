@@ -62,8 +62,7 @@ public class CharacterMovement : MonoBehaviour
         rigidBody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (Input.GetKey(KeyCode.A)|| mobileLeft)
         {
-            rigidBody2D.velocity = new Vector2(-movementSpeed, rigidBody2D.velocity.y);
-            
+            rigidBody2D.velocity = new Vector2(-movementSpeed, rigidBody2D.velocity.y);  
         }
         else
         {
@@ -86,6 +85,7 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)&& IsGrounded())
         {
             rigidBody2D.velocity = Vector2.up * jumpForce;
+            MusicManager.PlaySound("Jump");
         }
     }
    
@@ -191,6 +191,7 @@ public class CharacterMovement : MonoBehaviour
         if (IsGrounded())
         {
             rigidBody2D.velocity = Vector2.up * jumpForce;
+            MusicManager.PlaySound("Jump");
         }     
     }
 }
