@@ -62,5 +62,5 @@ public class EnnemyFollow : MonoBehaviour
             isFlipped = true;
         }
 
-    }    
+    }
 }

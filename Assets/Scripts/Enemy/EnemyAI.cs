@@ -59,7 +59,7 @@ public class EnemyAI : MonoBehaviour
         {
             StopAttack();
         }
-        else if (attackDistance >= distance && cooling == false)
+        if (attackDistance >= distance && cooling == false)
         {
             Attack();
         }
@@ -133,10 +133,6 @@ public class EnemyAI : MonoBehaviour
         {
             target = rightLimit;
         }
-
-        //Ternary Operator
-        //target = distanceToLeft > distanceToRight ? leftLimit : rightLimit;
-
         Flip();
     }
 
@@ -151,10 +147,6 @@ public class EnemyAI : MonoBehaviour
         {           
             rotation.y = 0;
         }
-
-        //Ternary Operator
-        //rotation.y = (currentTarget.position.x < transform.position.x) ? rotation.y = 180f : rotation.y = 0f;
-
         transform.eulerAngles = rotation;
     }
 }

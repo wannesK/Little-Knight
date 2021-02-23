@@ -10,10 +10,16 @@ public class CameraController : MonoBehaviour
     public float minY, maxY;
 
     private GameMaster gm;
+    private ScoreManager scoreManager;
     private void Awake()
     {
+        scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-        transform.position = gm.lastCheckPointPos;
+        transform.position = gm.lastCheckPointPos;              
+    }
+    private void Start()
+    {
+        CheckMusic();
     }
     void Update()
     {
@@ -21,5 +27,30 @@ public class CameraController : MonoBehaviour
             Mathf.Clamp(player.position.y, minY, maxY), transform.position.z);
 
         transform.position = Vector3.Lerp(transform.position, nextPos, followSpeed * Time.deltaTime);
+    }
+    public void MuteInGameMusic()
+    {
+        if (scoreManager.data.inGameMusicOff == true)
+        {
+            GetComponent<AudioSource>().enabled = true;
+            scoreManager.data.inGameMusicOff = false;           
+        }
+        else if (scoreManager.data.inGameMusicOff == false)
+        {
+            GetComponent<AudioSource>().enabled = false;
+            scoreManager.data.inGameMusicOff = true;           
+        }
+        
+    }
+    public void CheckMusic()
+    {
+        if (scoreManager.data.inGameMusicOff == false)
+        {           
+            GetComponent<AudioSource>().enabled = true;
+        }
+        else if (scoreManager.data.inGameMusicOff == true)
+        {
+            GetComponent<AudioSource>().enabled = false;
+        }
     }
 }

@@ -215,5 +215,6 @@ public class GameData
     public int dataAttackDamage;
     public int dataStrikeDamage;
     public int playerMaxHealt;
+    public bool inGameMusicOff;
 }
 

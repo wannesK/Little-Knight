@@ -2280,7 +2280,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 9317297}
-        m_MethodName: PlayerDamageUpgrade
+        m_MethodName: PlayerHealtUpgrade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2291,7 +2291,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2122370669}
-        m_MethodName: CheckForAttackLimit
+        m_MethodName: CheckForHealtLimit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
