@@ -133,7 +133,7 @@ public class EnemyAI : MonoBehaviour
         {
             target = rightLimit;
         }
-        Flip();
+         Flip();
     }
 
     public void Flip()

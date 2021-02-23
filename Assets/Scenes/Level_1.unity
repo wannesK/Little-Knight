@@ -20770,7 +20770,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 1.7
-  moveSpeed: 2
+  moveSpeed: 2.2
   timer: 1
   leftLimit: {fileID: 201663256}
   rightLimit: {fileID: 1707528032}
@@ -28680,7 +28680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 1.7
-  moveSpeed: 2
+  moveSpeed: 2.2
   timer: 1
   leftLimit: {fileID: 1078693584}
   rightLimit: {fileID: 306900165}

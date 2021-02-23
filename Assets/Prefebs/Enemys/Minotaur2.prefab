@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4450984955170054578}
   m_Layer: 0
   m_Name: triggerArea
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDistance: 1.7
-  moveSpeed: 2.2
+  moveSpeed: 2.5
   timer: 1
   leftLimit: {fileID: 0}
   rightLimit: {fileID: 0}

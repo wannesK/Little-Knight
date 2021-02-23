@@ -15,13 +15,13 @@ public class FollowZone : MonoBehaviour
     }
     private void Update()
     {
-        if (inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+        if (inRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))            
         {
             enemyParent.Flip();
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerStay2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))
         {
