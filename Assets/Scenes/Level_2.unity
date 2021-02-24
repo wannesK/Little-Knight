@@ -55260,7 +55260,7 @@ MonoBehaviour:
   player: {fileID: 379303654}
   followSpeed: 3.5
   minX: 0.09
-  maxX: 180
+  maxX: 300
   minY: 0
   maxY: 6
 --- !u!81 &1896295411

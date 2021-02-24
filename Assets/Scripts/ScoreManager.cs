@@ -108,6 +108,11 @@ public class ScoreManager : MonoBehaviour
         data.coin += Random.Range(2, 4);
         coinText.text = data.coin.ToString();
     }
+    public void RewardedAD()
+    {
+        data.coin += 50;
+        coinText.text = data.coin.ToString();
+    }
 
     public void PlayerDamageUpgrade()
     {
