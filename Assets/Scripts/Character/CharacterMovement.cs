@@ -28,9 +28,9 @@ public class CharacterMovement : MonoBehaviour
     public MovementStates movementState;
     public FacingDirection facingDirection;
 
+    public ParticleSystem dust;
 
     private bool mobileLeft, mobileRight;
-
     private Rigidbody2D rigidBody2D;    
     private BoxCollider2D boxCollider2D;
     private CharacterAnimationController animController;
@@ -62,13 +62,24 @@ public class CharacterMovement : MonoBehaviour
         rigidBody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
         if (Input.GetKey(KeyCode.A)|| mobileLeft)
         {
-            rigidBody2D.velocity = new Vector2(-movementSpeed, rigidBody2D.velocity.y);  
+            rigidBody2D.velocity = new Vector2(-movementSpeed, rigidBody2D.velocity.y);
+
+            if (IsGrounded())
+            {
+                CreateDust();
+            }
         }
         else
         {
             if (Input.GetKey(KeyCode.D) || mobileRight)
             {
                 rigidBody2D.velocity = new Vector2(+movementSpeed, rigidBody2D.velocity.y);
+
+                if (IsGrounded())
+                {
+                    CreateDust();
+                }
+                
             }
             else //NO KEYS PRESSED
             {
@@ -166,6 +177,11 @@ public class CharacterMovement : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    private void CreateDust()
+    {
+        dust.Play();
     }
     
     /// <summary>
