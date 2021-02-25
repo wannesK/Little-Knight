@@ -19,11 +19,14 @@ public class CharacterCombatControl : MonoBehaviour
     private float timeBetwAttack;
 
     private bool mobileBasicAttack, mobileStrike;
+
     private CharacterAnimationController animator;
     private ScoreManager scoreManager;
+    private CharacterMovement characterMovement;
     private void Start()
     {
         animator = GetComponent<CharacterAnimationController>();
+        characterMovement = GetComponent<CharacterMovement>();
         scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
 
         basicAttackDamage = scoreManager.data.dataAttackDamage;
@@ -53,7 +56,7 @@ public class CharacterCombatControl : MonoBehaviour
                 }
 
                 timeBtwAttack = startTimeBtwAttack;
-            }           
+            }            
         }
         else
         {
@@ -87,8 +90,6 @@ public class CharacterCombatControl : MonoBehaviour
         }
 
     }
-
-
     /// <summary>
     /// We can see the attack position and range with this method
     /// </summary>
@@ -96,6 +97,16 @@ public class CharacterCombatControl : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    public void StopCharacterWhenAttack()
+    {
+        characterMovement.movementSpeed = 0f;
+        Invoke("GiveBackMovementSpeed", 0.3f);
+    }
+    public void GiveBackMovementSpeed()
+    {
+        characterMovement.movementSpeed = 4f;
     }
 
     /// <summary>

@@ -73,8 +73,7 @@ public class CharacterMovement : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.D) || mobileRight)
             {
-                rigidBody2D.velocity = new Vector2(+movementSpeed, rigidBody2D.velocity.y);
-
+                rigidBody2D.velocity = new Vector2(+movementSpeed, rigidBody2D.velocity.y);                
                 if (IsGrounded())
                 {
                     CreateDust();
