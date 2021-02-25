@@ -10,11 +10,13 @@ public class ADS : MonoBehaviour, IUnityAdsListener
     string mySurfacingId = "Rewarded_Android";
     bool testMode = true;
 
+    private ScoreManager scoreManager;
     // Initialize the Ads listener and service:
     void Start()
     {
         Advertisement.AddListener(this);
         Advertisement.Initialize(gameId, testMode);
+        scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
     }
     public void ShowInterstitialAd()
     {
@@ -50,7 +52,8 @@ public class ADS : MonoBehaviour, IUnityAdsListener
             if (showResult == ShowResult.Finished)
             {
                 // Reward the user for watching the ad to completion.
-                ScoreManager.instance.RewardedAD();
+                scoreManager.data.coin += 50;
+                scoreManager.coinText.text = scoreManager.data.coin.ToString();
             }
         }
         

@@ -11,7 +11,6 @@ public class ScoreManager : MonoBehaviour
     private string filePath;
 
     public TextMeshProUGUI coinText;
-    
     private void Awake()
     {
         if (instance == null)
@@ -108,12 +107,6 @@ public class ScoreManager : MonoBehaviour
         data.coin += Random.Range(2, 4);
         coinText.text = data.coin.ToString();
     }
-    public void RewardedAD()
-    {
-        data.coin += 50;
-        coinText.text = data.coin.ToString();
-    }
-
     public void PlayerDamageUpgrade()
     {
         if (data.coin >= 200 && data.dataAttackDamage == 40)

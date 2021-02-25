@@ -29,7 +29,7 @@ RectTransform:
   m_GameObject: {fileID: 2330623465104376408}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5698135, y: 2.851277, z: 1}
+  m_LocalScale: {x: 0.56128407, y: 3.0193686, z: 1}
   m_Children: []
   m_Father: {fileID: 3818813933132306009}
   m_RootOrder: 5
@@ -232,7 +232,7 @@ RectTransform:
   m_GameObject: {fileID: 3818813933434373276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9201936, y: 4.2659726, z: 1}
+  m_LocalScale: {x: 0.90641946, y: 4.5174646, z: 1}
   m_Children: []
   m_Father: {fileID: 3818813933132306009}
   m_RootOrder: 3
@@ -394,7 +394,7 @@ RectTransform:
   m_GameObject: {fileID: 3818813934166944685}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9201936, y: 4.2659726, z: 1}
+  m_LocalScale: {x: 0.90641946, y: 4.5174646, z: 1}
   m_Children: []
   m_Father: {fileID: 3818813933132306009}
   m_RootOrder: 1
@@ -556,7 +556,7 @@ RectTransform:
   m_GameObject: {fileID: 3818813935068440429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9201936, y: 4.2659726, z: 1}
+  m_LocalScale: {x: 0.90641946, y: 4.5174646, z: 1}
   m_Children: []
   m_Father: {fileID: 3818813933132306009}
   m_RootOrder: 2
@@ -703,7 +703,7 @@ RectTransform:
   m_GameObject: {fileID: 3818813935081434004}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9201936, y: 4.2659726, z: 1}
+  m_LocalScale: {x: 0.90641946, y: 4.5174646, z: 1}
   m_Children: []
   m_Father: {fileID: 3818813933132306009}
   m_RootOrder: 0
@@ -865,7 +865,7 @@ RectTransform:
   m_GameObject: {fileID: 5041157016993751259}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.9201936, y: 4.2659726, z: 1}
+  m_LocalScale: {x: 0.90641946, y: 4.5174646, z: 1}
   m_Children:
   - {fileID: 4344447436491934224}
   m_Father: {fileID: 3818813933132306009}
