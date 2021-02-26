@@ -50,7 +50,7 @@ public class CharacterHealt : MonoBehaviour
             GetComponent<SlowMotion>().SlowTheTime();
             
             anim.PlayDeadAnim();
-            Invoke("RestartLastCheckPoint", 1.2f);
+            Invoke("RestartLastCheckPoint", 1f);
         }
         
     }
