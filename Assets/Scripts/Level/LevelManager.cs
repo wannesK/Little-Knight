@@ -1,14 +1,19 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
     int levelUnlocked;
     public Button[] buttons;
 
+    [Header("Loading screen settings")]
+    public Slider loadingBar;
+    public GameObject loadingScreen;
+    public GameObject images;
+    public TextMeshProUGUI progressText;
     private void Start()
     {
         levelUnlocked = PlayerPrefs.GetInt("levelUnlocked", 1);
@@ -23,6 +28,21 @@ public class LevelManager : MonoBehaviour
     }
     public void LoadLevel(int levelIndex)
     {
-        SceneManager.LoadScene(levelIndex);
+        images.SetActive(false);
+        loadingScreen.SetActive(true);
+
+        StartCoroutine(startLoading(levelIndex));
+    }
+    IEnumerator startLoading(int levelIndex)
+    {
+        AsyncOperation async = SceneManager.LoadSceneAsync(levelIndex);
+        while (!async.isDone)
+        {
+            float progress = Mathf.Clamp01(async.progress / .9f);
+            loadingBar.value = progress;
+            progressText.text = "LOADING .. " + (progress * 100).ToString("0");
+
+            yield return null;
+        }
     }
 }
