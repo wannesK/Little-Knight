@@ -37498,7 +37498,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCurrentHealt: 0
   enemyDamage: 20
-  anim: {fileID: 1292282614}
 --- !u!114 &1292282613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38583,7 +38582,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15298462, y: 0.74121976}
+  m_Offset: {x: -0.20235443, y: 1.2219846}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -38594,7 +38593,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3059692, y: 2.4824395}
+  m_Size: {x: 0.59529114, y: 3.4439692}
   m_EdgeRadius: 0
 --- !u!1 &1351833854
 GameObject:
@@ -39417,8 +39416,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 893167396}
-  - {fileID: 1354800387}
   - {fileID: 1652663537}
+  - {fileID: 1354800387}
   - {fileID: 1971516822}
   - {fileID: 1427950396}
   m_Father: {fileID: 0}
@@ -95899,7 +95898,7 @@ RectTransform:
   - {fileID: 231449159}
   - {fileID: 676465004}
   m_Father: {fileID: 1365050460}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

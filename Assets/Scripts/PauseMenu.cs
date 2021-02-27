@@ -4,25 +4,10 @@ using UnityEngine;
 
 public class PauseMenu : MonoBehaviour
 {
-
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject touchControlUI;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (GameIsPaused)
-            {
-                Resume();
-            }
-            else
-            {
-                Pause();
-            }
-        }
-    }
     public void Resume()
     {
         touchControlUI.SetActive(true);

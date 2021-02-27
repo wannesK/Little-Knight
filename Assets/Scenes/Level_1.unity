@@ -16032,7 +16032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822853765}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 96.1, y: 7.44, z: 10}
+  m_LocalPosition: {x: 96.1, y: 7.56, z: 10}
   m_LocalScale: {x: 2.05, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 200847126}
@@ -23081,7 +23081,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437650221}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 97.34, y: 7.41, z: 10}
+  m_LocalPosition: {x: 97.34, y: 7.5299997, z: 10}
   m_LocalScale: {x: 2.05, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 200847126}
@@ -23300,7 +23300,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCurrentHealt: 0
   enemyDamage: 20
-  anim: {fileID: 1503106344}
 --- !u!114 &1503106343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24229,8 +24228,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1797649027}
-  - {fileID: 287483028}
   - {fileID: 1704228930}
+  - {fileID: 287483028}
   - {fileID: 948091403}
   - {fileID: 767055450}
   m_Father: {fileID: 0}
@@ -25287,7 +25286,7 @@ RectTransform:
   - {fileID: 820562822}
   - {fileID: 1423772915}
   m_Father: {fileID: 1543927217}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -33053,7 +33052,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 1.1125281}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -33064,7 +33063,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 3.2250562}
   m_EdgeRadius: 0
 --- !u!1 &1940909779
 GameObject:
@@ -33518,7 +33517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990999095}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 81.64, y: 1.41, z: 10}
+  m_LocalPosition: {x: 81.64, y: 1.47, z: 10}
   m_LocalScale: {x: 2.05, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 200847126}
@@ -34289,7 +34288,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073289138}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 103.04, y: 8.522, z: 10}
+  m_LocalPosition: {x: 103.04, y: 8.517, z: 10}
   m_LocalScale: {x: 1.0625, y: 1.19, z: 1}
   m_Children:
   - {fileID: 2036200441}

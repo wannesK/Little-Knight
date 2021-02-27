@@ -9,13 +9,11 @@ public class EnnemyFollow : MonoBehaviour
     public float stopRange;
     public bool isFlipped = false;
  
-
     private Transform player;
     private Animator animator;
 
     void Start()
-    {
-        
+    {       
         player = GameObject.FindGameObjectWithTag("Player").transform;
         animator = GetComponent<Animator>();
     }
@@ -27,8 +25,7 @@ public class EnnemyFollow : MonoBehaviour
     }
 
     public void FollowThePlayer()
-    {
-        
+    {        
         float distanceFromPlayer = Vector2.Distance(player.position, transform.position);
         animator.SetBool("enemyRun", false);
 

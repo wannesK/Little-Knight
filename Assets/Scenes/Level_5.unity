@@ -20902,7 +20902,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15298462, y: 0.74121976}
+  m_Offset: {x: 0.15298462, y: 0.84267974}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -20913,7 +20913,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3059692, y: 2.4824395}
+  m_Size: {x: 1.3059692, y: 2.6853595}
   m_EdgeRadius: 0
 --- !u!1 &767553462
 GameObject:
@@ -59655,7 +59655,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15298462, y: 0.74121976}
+  m_Offset: {x: 0.15298462, y: 0.7512455}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -59666,7 +59666,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3059692, y: 2.4824395}
+  m_Size: {x: 1.3059692, y: 2.502491}
   m_EdgeRadius: 0
 --- !u!1 &1378001552
 GameObject:
@@ -73339,7 +73339,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCurrentHealt: 0
   enemyDamage: 20
-  anim: {fileID: 1839666525}
 --- !u!114 &1839666524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85809,7 +85808,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15298462, y: 0.74121976}
+  m_Offset: {x: 0.15298462, y: 0.93344665}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -85820,7 +85819,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.3059692, y: 2.4824395}
+  m_Size: {x: 1.3059692, y: 2.8668933}
   m_EdgeRadius: 0
 --- !u!1 &2091308987
 GameObject:
