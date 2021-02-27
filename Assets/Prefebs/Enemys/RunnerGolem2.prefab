@@ -165,7 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf3fb911be869064fbdf5a1eac2d1f41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4.5
+  speed: 5
   playerFollowRange: 5.32
   stopRange: 0.99
   isFlipped: 0

@@ -71856,6 +71856,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCurrentHealt: 0
   enemyDamage: 20
+  touchControl: {fileID: 1528985862}
 --- !u!114 &1114362549
 MonoBehaviour:
   m_ObjectHideFlags: 0

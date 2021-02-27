@@ -7144,7 +7144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323089998}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250.41, y: 4.730001, z: 10}
+  m_LocalPosition: {x: 246.94, y: 4.730001, z: 10}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1561308959}
@@ -37330,7 +37330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1279596000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 241.9, y: 4.77, z: 10}
+  m_LocalPosition: {x: 239.09, y: 4.77, z: 10}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1561308959}
@@ -37498,6 +37498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCurrentHealt: 0
   enemyDamage: 20
+  touchControl: {fileID: 1354800388}
 --- !u!114 &1292282613
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38550,7 +38551,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344935866}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 250.24, y: 4.9, z: 0}
+  m_LocalPosition: {x: 249.23, y: 4.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1278428989}

@@ -385,5 +385,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healt: 550
+  healt: 600
   hitEffect: {fileID: 0}

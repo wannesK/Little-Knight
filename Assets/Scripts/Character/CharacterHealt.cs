@@ -5,6 +5,7 @@ public class CharacterHealt : MonoBehaviour
 {
     public float playerCurrentHealt;
     public float enemyDamage;
+    public GameObject touchControl;
 
     private CharacterAnimationController anim;
     private Rigidbody2D rigid;
@@ -56,6 +57,7 @@ public class CharacterHealt : MonoBehaviour
         GetComponent<SlowMotion>().SlowTheTime();
         anim.PlayDeadAnim();
         runnerGolem.speed = 0f;
+        touchControl.SetActive(false);
     }
     public void RestartLastCheckPoint()
     {

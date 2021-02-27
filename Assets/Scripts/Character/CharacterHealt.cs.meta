@@ -3,7 +3,9 @@ guid: 8cee9734ab38cf54ba009a2ba607b155
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - touchControl: {fileID: 3818813933132306008, guid: 35aa22df0a3aa7040871ac09ca409166,
+      type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

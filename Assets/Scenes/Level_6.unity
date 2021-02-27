@@ -24369,6 +24369,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCurrentHealt: 0
   enemyDamage: 20
+  touchControl: {fileID: 1436615618}
 --- !u!114 &847042652
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28310,7 +28311,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1016143746}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 79.64, y: 5.74, z: 0}
+  m_LocalPosition: {x: 79.18, y: 5.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1030347606}
@@ -32183,7 +32184,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181969737}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 279.85, y: 11.64, z: 0}
+  m_LocalPosition: {x: 279.457, y: 11.346, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1030347606}

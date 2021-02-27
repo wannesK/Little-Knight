@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01502ae1140e3d849b6289f0a7e78d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 1.5
+  attackDistance: 1.4
   moveSpeed: 2.5
   timer: 1.2
   leftLimit: {fileID: 0}

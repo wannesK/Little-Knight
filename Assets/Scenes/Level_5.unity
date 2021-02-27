@@ -68899,9 +68899,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 550
+  m_MaxValue: 600
   m_WholeNumbers: 0
-  m_Value: 550
+  m_Value: 600
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -73339,6 +73339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCurrentHealt: 0
   enemyDamage: 20
+  touchControl: {fileID: 712387478}
 --- !u!114 &1839666524
 MonoBehaviour:
   m_ObjectHideFlags: 0
