@@ -6,7 +6,7 @@ public class ADS : MonoBehaviour, IUnityAdsListener
     string gameId = "4024933";
     string mySurfacingId = "Rewarded_Android";
     string interstitialAd = "Interstitial_Android";
-    bool testMode = true;
+    bool testMode = false;
 
     private ScoreManager scoreManager;
     // Initialize the Ads listener and service:
