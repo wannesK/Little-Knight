@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelScript : MonoBehaviour
@@ -10,13 +8,7 @@ public class LevelScript : MonoBehaviour
     {
         gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
     }
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.End))
-        {
-            ResetLevels();
-        }
-    }
+
     public void PassLevel()
     {
         int currentlevel = SceneManager.GetActiveScene().buildIndex;
@@ -25,15 +17,9 @@ public class LevelScript : MonoBehaviour
         {
             PlayerPrefs.SetInt("levelUnlocked",currentlevel);
         }
-        Debug.Log("LEVEL" + PlayerPrefs.GetInt("levelUnlocked") + "UNLOCKED");
         LoadLevelSelect();
     }
 
-    public void ResetLevels()
-    {
-        PlayerPrefs.DeleteAll();
-        Debug.Log("Levels Reseted");
-    }
     public void LoadLevelSelect()
     {
         SceneManager.LoadScene("LevelSelect");

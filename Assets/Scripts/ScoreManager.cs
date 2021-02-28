@@ -17,7 +17,6 @@ public class ScoreManager : MonoBehaviour
             instance = this;
         binaryFormatter = new BinaryFormatter();
         filePath = Application.persistentDataPath + "/game.data";
-        Debug.Log(filePath);
     }
 
     public void Start()
@@ -29,21 +28,11 @@ public class ScoreManager : MonoBehaviour
             data.playerMaxHealt = 100;
         }
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Delete))
-        {
-            DeleteData();
-            Debug.Log("Datas Deleted");
-        }
-    }
     public void SaveData()
     {
         FileStream fileStream = new FileStream(filePath, FileMode.Create);
         binaryFormatter.Serialize(fileStream, data);
         fileStream.Close();
-        Debug.Log("Data Saved");
     }
 
     public void LoadData()
@@ -54,7 +43,6 @@ public class ScoreManager : MonoBehaviour
             data = (GameData)binaryFormatter.Deserialize(fileStream);
             coinText.text = " " + data.coin;
             fileStream.Close();
-            Debug.Log("Data loaded");
         }
         else
         {
@@ -90,18 +78,6 @@ public class ScoreManager : MonoBehaviour
     {
         SaveData();
     }
-    public void DeleteData()
-    {
-        FileStream fileStream = new FileStream(filePath, FileMode.Create);
-        data.coin = 0;
-        data.dataAttackDamage = 40;
-        data.dataStrikeDamage = 60;
-        data.playerMaxHealt = 100;
-        coinText.text = "0";
-        binaryFormatter.Serialize(fileStream, data);
-        fileStream.Close();
-    }
-
     public void CoinCounter()
     {
         data.coin += Random.Range(2, 4);

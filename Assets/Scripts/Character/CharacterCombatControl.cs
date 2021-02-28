@@ -1,10 +1,7 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterCombatControl : MonoBehaviour
-{  
-    
+{      
     [Header("Basic Attack Settings")]
     public Transform attackPos;
     public LayerMask whatIsEnemies;   
@@ -19,7 +16,6 @@ public class CharacterCombatControl : MonoBehaviour
     private float timeBetwAttack;
 
     private bool mobileBasicAttack, mobileStrike;
-
     private CharacterAnimationController animator;
     private ScoreManager scoreManager;
     private CharacterMovement characterMovement;

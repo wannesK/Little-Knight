@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LevelEndTrigger : MonoBehaviour
 {
@@ -11,7 +9,6 @@ public class LevelEndTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             LevelComplete();
-            //GameObject.Find("Character").GetComponent<CharacterMovement>().enabled = false;
         }
     }
     public void LevelComplete()

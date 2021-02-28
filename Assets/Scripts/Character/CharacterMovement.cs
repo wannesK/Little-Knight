@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -147,11 +145,9 @@ public class CharacterMovement : MonoBehaviour
         switch (facingDirection)
         {
             case FacingDirection.Right:
-                //spriteRenderer.flipX = false;
                 transform.localScale = new Vector2(1, 1);
                 break;
             case FacingDirection.Left:
-                //spriteRenderer.flipX = true;  
                 transform.localScale = new Vector2(-1, 1);
                 break;
         }

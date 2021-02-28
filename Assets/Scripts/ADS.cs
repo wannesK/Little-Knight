@@ -1,13 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Advertisements;
-
 
 public class ADS : MonoBehaviour, IUnityAdsListener
 {
     string gameId = "4024933";
     string mySurfacingId = "Rewarded_Android";
+    string interstitialAd = "Interstitial_Android";
     bool testMode = true;
 
     private ScoreManager scoreManager;
@@ -20,9 +18,9 @@ public class ADS : MonoBehaviour, IUnityAdsListener
     }
     public void ShowInterstitialAd()
     {
-        if (Advertisement.IsReady())
+        if (Advertisement.IsReady(interstitialAd))
         {
-            Advertisement.Show();
+            Advertisement.Show(interstitialAd);
         }
         else
         {
