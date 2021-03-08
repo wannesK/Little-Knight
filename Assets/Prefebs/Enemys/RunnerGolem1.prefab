@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1811912474475988282}
   - component: {fileID: 1811912474475988285}
   - component: {fileID: 1811912474475988284}
-  - component: {fileID: 1811912474475988287}
+  - component: {fileID: 4999839220083049886}
   m_Layer: 11
   m_Name: RunnerGolem1
   m_TagString: EnemyRunner
@@ -169,7 +169,7 @@ MonoBehaviour:
   playerFollowRange: 5.32
   stopRange: 0.99
   isFlipped: 0
---- !u!114 &1811912474475988287
+--- !u!114 &4999839220083049886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,11 +178,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1811912474475988275}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
+  m_Script: {fileID: 11500000, guid: 4a795d42d0c3f3b43aa68432bbf887ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healt: 10
-  hitEffect: {fileID: 0}
 --- !u!1 &1811912474624220715
 GameObject:
   m_ObjectHideFlags: 0

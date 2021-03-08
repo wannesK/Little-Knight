@@ -1,16 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class BossHealtbar : MonoBehaviour
 {
-    public Slider healtBar;
     public EnemyHealt enemyHealt;
 
+    private Slider healtBar; 
     private LevelEndTrigger end;
     private void Start()
     {
+        healtBar = GetComponent<Slider>();
         end = GameObject.FindGameObjectWithTag("LevelEnd").GetComponent<LevelEndTrigger>();
     }
     void Update()

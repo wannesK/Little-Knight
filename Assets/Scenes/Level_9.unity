@@ -7615,10 +7615,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2560
   basicAttackDamage: 40
-  startTimeBtwAttack: 0.5
+  startTimeBtwnBasicAttack: 0.5
   attackRange: 0.67
   strikeDamage: 60
-  startTimeBetwAttack: 3
+  startTimeBtwnStrike: 3
 --- !u!4 &250695133
 Transform:
   m_ObjectHideFlags: 0
@@ -8444,6 +8444,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 932883721}
     m_Modifications:
+    - target: {fileID: 8620774461028245200, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8620774461775893064, guid: 2cfcf264a5a404b45b0c8011acce06d3,
         type: 3}
       propertyPath: rightLimit
@@ -8508,6 +8513,56 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893065, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893065, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893065, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893068, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893068, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893068, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893068, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893068, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893068, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 4.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8620774461775893068, guid: 2cfcf264a5a404b45b0c8011acce06d3,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 8620774461775893069, guid: 2cfcf264a5a404b45b0c8011acce06d3,
         type: 3}
@@ -12042,7 +12097,7 @@ GameObject:
   - component: {fileID: 412606533}
   m_Layer: 0
   m_Name: HitEffect
-  m_TagString: Untagged
+  m_TagString: EnemyTakeHitEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17622,7 +17677,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -17693,8 +17748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cc1289032a0884a8b0debb8697192a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtBar: {fileID: 447608897}
-  enemyHealt: {fileID: 8897117411250038881}
+  enemyHealt: {fileID: 5925982954355513643}
 --- !u!114 &447608897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74822,7 +74876,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150.1, y: 14}
+  m_AnchoredPosition: {x: -144.2, y: 14}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1564146821
@@ -105680,16 +105734,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 258af939c2653f247bae8e6fbe1d27d0, type: 3}
---- !u!114 &8897117411250038881 stripped
+--- !u!114 &5925982954355513643 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2973988995553374539, guid: 258af939c2653f247bae8e6fbe1d27d0,
+  m_CorrespondingSourceObject: {fileID: 5312253787381239529, guid: 258af939c2653f247bae8e6fbe1d27d0,
     type: 3}
   m_PrefabInstance: {fileID: 5925982954355513642}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
+  m_Script: {fileID: 11500000, guid: 62f3017e08b713e4d89447a14424e411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &8897117411250038884 stripped

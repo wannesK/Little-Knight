@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 8816321092241519414}
   - component: {fileID: 8816321092241519415}
   - component: {fileID: 8816321092241519412}
-  - component: {fileID: 8816321092241519413}
   - component: {fileID: 8816321092241519418}
+  - component: {fileID: 3514789305162883354}
   m_Layer: 9
   m_Name: BossKnight_2
   m_TagString: Enemy
@@ -155,20 +155,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8816321092241519413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8816321092241519419}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healt: 700
-  hitEffect: {fileID: 0}
 --- !u!114 &8816321092241519418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,6 +176,20 @@ MonoBehaviour:
   triggerArea: {fileID: 8816321093559247656}
   target: {fileID: 0}
   inRange: 0
+--- !u!114 &3514789305162883354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8816321092241519419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f3017e08b713e4d89447a14424e411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healt: 700
+  healtBar: {fileID: 0}
 --- !u!1 &8816321093559247656
 GameObject:
   m_ObjectHideFlags: 0

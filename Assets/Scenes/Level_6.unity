@@ -24314,10 +24314,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2560
   basicAttackDamage: 40
-  startTimeBtwAttack: 0.5
+  startTimeBtwnBasicAttack: 0.5
   attackRange: 0.67
   strikeDamage: 60
-  startTimeBetwAttack: 3
+  startTimeBtwnStrike: 3
 --- !u!4 &847042649
 Transform:
   m_ObjectHideFlags: 0
@@ -32535,7 +32535,7 @@ GameObject:
   - component: {fileID: 1213262701}
   m_Layer: 0
   m_Name: HitEffect
-  m_TagString: Untagged
+  m_TagString: EnemyTakeHitEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

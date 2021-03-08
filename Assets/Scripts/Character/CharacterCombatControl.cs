@@ -6,16 +6,17 @@ public class CharacterCombatControl : MonoBehaviour
     public Transform attackPos;
     public LayerMask whatIsEnemies;   
     public int basicAttackDamage = 0;        
-    public float startTimeBtwAttack;  // Delay between normal attacks
+    public float startTimeBtwnBasicAttack;  // Delay between basic attacks
     public float attackRange;
-    private float timeBtwAttack;
+    private float timeBtwnBasicAttack;
 
     [Header("Strike Settings")]
     public int strikeDamage = 0;   
-    public float startTimeBetwAttack; // Delay between strikes
-    private float timeBetwAttack;
+    public float startTimeBtwnStrike; // Delay between strikes
+    private float timeBtwnStrike;
 
     private bool mobileBasicAttack, mobileStrike;
+
     private CharacterAnimationController animator;
     private ScoreManager scoreManager;
     private CharacterMovement characterMovement;
@@ -39,24 +40,25 @@ public class CharacterCombatControl : MonoBehaviour
     /// </summary>
     public void BasicAttack ()
     {
-        if (timeBtwAttack <= 0)
+        if (timeBtwnBasicAttack <= 0)
         {    
             if (Input.GetKeyDown(KeyCode.LeftControl) || mobileBasicAttack)
             {                
                 animator.PlayBasicAttackAnim();
                 MusicManager.PlaySound("Sword");
+
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<EnemyHealt>().EnemyTakeDamage(basicAttackDamage);
                 }
 
-                timeBtwAttack = startTimeBtwAttack;
+                timeBtwnBasicAttack = startTimeBtwnBasicAttack;
             }            
         }
         else
         {
-            timeBtwAttack -= Time.deltaTime;
+            timeBtwnBasicAttack -= Time.deltaTime;
         }
     }
 
@@ -65,24 +67,25 @@ public class CharacterCombatControl : MonoBehaviour
     /// </summary>
     public void Strike()
     {
-        if (timeBetwAttack <= 0 && timeBtwAttack <= 0)
+        if (timeBtwnStrike <= 0 && timeBtwnBasicAttack <= 0)
         {   
             if (Input.GetKeyDown(KeyCode.RightControl) || mobileStrike)
             {
                 animator.PlayStrikeAnim();
                 MusicManager.PlaySound("Sword");
+
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     enemiesToDamage[i].GetComponent<EnemyHealt>().EnemyTakeDamage(strikeDamage);
                 }
 
-                timeBetwAttack = startTimeBetwAttack;
+                timeBtwnStrike = startTimeBtwnStrike;
             }
         }
         else
         {
-            timeBetwAttack -= Time.deltaTime;
+            timeBtwnStrike -= Time.deltaTime;
         }
 
     }

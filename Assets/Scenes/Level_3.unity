@@ -21243,7 +21243,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -151.8, y: 20.6}
+  m_AnchoredPosition: {x: -145, y: 16.3}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &211980280
@@ -44635,10 +44635,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2560
   basicAttackDamage: 40
-  startTimeBtwAttack: 0.5
+  startTimeBtwnBasicAttack: 0.5
   attackRange: 0.67
   strikeDamage: 60
-  startTimeBetwAttack: 3
+  startTimeBtwnStrike: 3
 --- !u!114 &1203974476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47670,8 +47670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cc1289032a0884a8b0debb8697192a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtBar: {fileID: 1377418867}
-  enemyHealt: {fileID: 1720341976}
+  enemyHealt: {fileID: 1497217966}
 --- !u!114 &1377418867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54319,6 +54318,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497217966 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7871259173097296199, guid: 79c6a1f23b0ee014982b9da6618ada36,
+    type: 3}
+  m_PrefabInstance: {fileID: 1734270729}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f3017e08b713e4d89447a14424e411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1500076933
 GameObject:
   m_ObjectHideFlags: 0
@@ -57256,18 +57267,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.9611053, y: 0.3911116}
   m_EdgeRadius: 0
---- !u!114 &1720341976 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5858230927821795097, guid: 79c6a1f23b0ee014982b9da6618ada36,
-    type: 3}
-  m_PrefabInstance: {fileID: 1734270729}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1720714838
 GameObject:
   m_ObjectHideFlags: 0
@@ -57729,7 +57728,18 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 20.595184
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6516799643983486996, guid: 79c6a1f23b0ee014982b9da6618ada36,
+        type: 3}
+      propertyPath: healtBar
+      value: 
+      objectReference: {fileID: 1377418867}
+    - target: {fileID: 7871259173097296199, guid: 79c6a1f23b0ee014982b9da6618ada36,
+        type: 3}
+      propertyPath: healtBar
+      value: 
+      objectReference: {fileID: 1377418867}
+    m_RemovedComponents:
+    - {fileID: 6516799643983486996, guid: 79c6a1f23b0ee014982b9da6618ada36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 79c6a1f23b0ee014982b9da6618ada36, type: 3}
 --- !u!4 &1734270730 stripped
 Transform:
@@ -64175,7 +64185,7 @@ GameObject:
   - component: {fileID: 2031679972}
   m_Layer: 0
   m_Name: HitEffect
-  m_TagString: Untagged
+  m_TagString: EnemyTakeHitEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

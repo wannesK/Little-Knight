@@ -83,8 +83,8 @@ GameObject:
   - component: {fileID: 4450984955859818884}
   - component: {fileID: 4450984955859818887}
   - component: {fileID: 4450984955859818886}
-  - component: {fileID: 4450984955859818881}
   - component: {fileID: 4450984955859818880}
+  - component: {fileID: 5115394622606208397}
   m_Layer: 9
   m_Name: Minotaur2
   m_TagString: Enemy
@@ -225,20 +225,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4450984955859818881
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4450984955859818882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healt: 180
-  hitEffect: {fileID: 0}
 --- !u!114 &4450984955859818880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +246,19 @@ MonoBehaviour:
   triggerArea: {fileID: 4450984955170054588}
   target: {fileID: 0}
   inRange: 0
+--- !u!114 &5115394622606208397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4450984955859818882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e88b33c201811145b703dab59eb0e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healt: 200
 --- !u!1 &4450984956956393626
 GameObject:
   m_ObjectHideFlags: 0

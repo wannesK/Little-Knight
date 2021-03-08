@@ -38,11 +38,8 @@ public class CharacterHealt : MonoBehaviour
             rigid.velocity = Vector2.up * 12;
             CharacterTakeDamage();
         }
-        if (playerCurrentHealt <= 0)
-        {   
-            CharacterDead();
-            Invoke("RestartLastCheckPoint", 1f);
-        }       
+
+         CheckForCharacterDead();     
     }
     public void CharacterTakeDamage()
     {
@@ -51,13 +48,22 @@ public class CharacterHealt : MonoBehaviour
         shake.CamShake();
         MusicManager.PlaySound("CharacterHurt");
     }
-    public void CharacterDead()
-    {      
-        GetComponent<CharacterMovement>().enabled = false;
-        GetComponent<SlowMotion>().SlowTheTime();
-        anim.PlayDeadAnim();
-        runnerGolem.speed = 0f;
-        touchControl.SetActive(false);
+    public void CheckForCharacterDead()
+    {
+        if (playerCurrentHealt <= 0)
+        {
+            playerCurrentHealt = 0;
+
+            GetComponent<CharacterMovement>().enabled = false;
+            GetComponent<CharacterCombatControl>().enabled = false;
+            GetComponent<SlowMotion>().SlowTheTime();
+
+            runnerGolem.speed = 0f;
+            anim.PlayDeadAnim();            
+            touchControl.SetActive(false);
+
+            Invoke("RestartLastCheckPoint", 1f);
+        }        
     }
     public void RestartLastCheckPoint()
     {

@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 870232539985801155}
   - component: {fileID: 870232539985801152}
   - component: {fileID: 870232539985801153}
-  - component: {fileID: 870232539985801159}
+  - component: {fileID: 2699882772654979917}
   m_Layer: 9
   m_Name: BossTroll
   m_TagString: Enemy
@@ -373,7 +373,7 @@ MonoBehaviour:
   triggerArea: {fileID: 870232539913069677}
   target: {fileID: 0}
   inRange: 0
---- !u!114 &870232539985801159
+--- !u!114 &2699882772654979917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -382,8 +382,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 870232539985801166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
+  m_Script: {fileID: 11500000, guid: 62f3017e08b713e4d89447a14424e411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   healt: 600
-  hitEffect: {fileID: 0}
+  healtBar: {fileID: 0}

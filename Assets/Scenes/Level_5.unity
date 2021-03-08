@@ -17455,7 +17455,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153.3, y: 1.1}
+  m_AnchoredPosition: {x: -147.8, y: 1.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &618862149
@@ -46476,6 +46476,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1039735289 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2699882772654979917, guid: 46e6aa55cbb75af4fbee8c1f5f5ffdc5,
+    type: 3}
+  m_PrefabInstance: {fileID: 870232538929293513}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f3017e08b713e4d89447a14424e411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1051572752
 GameObject:
   m_ObjectHideFlags: 0
@@ -48443,18 +48455,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 870232538929293513}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1124796174 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 870232539985801159, guid: 46e6aa55cbb75af4fbee8c1f5f5ffdc5,
-    type: 3}
-  m_PrefabInstance: {fileID: 870232538929293513}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1125392168
 GameObject:
   m_ObjectHideFlags: 0
@@ -52114,7 +52114,7 @@ GameObject:
   - component: {fileID: 1258879145}
   m_Layer: 0
   m_Name: HitEffect
-  m_TagString: Untagged
+  m_TagString: EnemyTakeHitEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68853,8 +68853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cc1289032a0884a8b0debb8697192a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtBar: {fileID: 1675113750}
-  enemyHealt: {fileID: 1124796174}
+  enemyHealt: {fileID: 1039735289}
 --- !u!114 &1675113750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73357,10 +73356,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2560
   basicAttackDamage: 40
-  startTimeBtwAttack: 0.5
+  startTimeBtwnBasicAttack: 0.5
   attackRange: 0.67
   strikeDamage: 60
-  startTimeBetwAttack: 3
+  startTimeBtwnStrike: 3
 --- !u!114 &1839666525
 MonoBehaviour:
   m_ObjectHideFlags: 0

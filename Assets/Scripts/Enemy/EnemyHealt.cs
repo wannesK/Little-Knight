@@ -3,44 +3,44 @@
 public class EnemyHealt : MonoBehaviour
 {
     public int healt;
-    public GameObject hitEffect;
-    
-    private Shake shake; // Camera Shake
+
+    private GameObject hitEffect;    
+    private Shake shake;          // Camera Shake
     private Animator animator;
     private void Start()
     {
         animator = GetComponent<Animator>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        hitEffect = GameObject.FindGameObjectWithTag("EnemyTakeHitEffect").gameObject;
     }
-    public void EnemyTakeDamage(int damage)
+    public virtual void EnemyTakeDamage(int damage)
     {             
         healt -= damage;
-        TakingDamage();
 
-        if (gameObject.CompareTag("Enemy") && healt <= 0)
-        {    
-            GetComponent<EnemyAI>().enabled = false;
-            EnemyDead();
-        }
-        if (gameObject.CompareTag("EnemyRunner") && healt <= 0)
-        {   // Runner DEAD
-            GetComponent<EnnemyFollow>().enabled = false;
-            transform.GetChild(0).gameObject.SetActive(false);
-            EnemyDead();
-        }
-    }
-    public void TakingDamage()
-    {
         shake.CamShake();
-        GameObject effectClone = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        Destroy(effectClone, 1f);
+        HitEffect();
+
         animator.SetTrigger("enemyHurt");
         MusicManager.PlaySound("SwordImpact");
     }
-    public void EnemyDead()
+
+    protected bool CheckForDead()
     {
-        animator.SetTrigger("enemyDead");
-        Destroy(this.gameObject, 1f);
+        if (healt <= 0)
+        {
+            healt = 0;
+            transform.GetChild(0).gameObject.SetActive(false);
+            animator.SetTrigger("enemyDead");
+            Destroy(this.gameObject, 1f);
+
+            return true;
+        }
+        return false;
+    }
+    private void HitEffect()
+    {
+        GameObject effectClone = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        Destroy(effectClone, 1f);
     }
 
     private void OnTriggerExit2D(Collider2D collision)

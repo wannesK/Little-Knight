@@ -46329,7 +46329,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -155.1, y: 6.1}
+  m_AnchoredPosition: {x: -149.6, y: 6.1}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662008945
@@ -49136,7 +49136,7 @@ GameObject:
   - component: {fileID: 762207747}
   m_Layer: 0
   m_Name: HitEffect
-  m_TagString: Untagged
+  m_TagString: EnemyTakeHitEffect
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71874,10 +71874,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2560
   basicAttackDamage: 40
-  startTimeBtwAttack: 0.5
+  startTimeBtwnBasicAttack: 0.5
   attackRange: 0.67
   strikeDamage: 60
-  startTimeBetwAttack: 3
+  startTimeBtwnStrike: 3
 --- !u!114 &1114362550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85722,8 +85722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0cc1289032a0884a8b0debb8697192a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healtBar: {fileID: 1639579259}
-  enemyHealt: {fileID: 468125769418477722}
+  enemyHealt: {fileID: 8946049617677771696}
 --- !u!114 &1639579259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95577,18 +95576,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &468125769418477722 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8816321092241519413, guid: b2db404fcac8b264da4c96fcfb4cbb65,
-    type: 3}
-  m_PrefabInstance: {fileID: 8946049617677771695}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &468125769418477727 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8816321092241519408, guid: b2db404fcac8b264da4c96fcfb4cbb65,
@@ -95679,3 +95666,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2db404fcac8b264da4c96fcfb4cbb65, type: 3}
+--- !u!114 &8946049617677771696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3514789305162883354, guid: b2db404fcac8b264da4c96fcfb4cbb65,
+    type: 3}
+  m_PrefabInstance: {fileID: 8946049617677771695}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62f3017e08b713e4d89447a14424e411, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

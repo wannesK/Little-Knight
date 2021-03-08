@@ -210,8 +210,8 @@ GameObject:
   - component: {fileID: 5653656461402129421}
   - component: {fileID: 5653656461402129420}
   - component: {fileID: 5653656461402129423}
-  - component: {fileID: 5653656461402129422}
   - component: {fileID: 5653656461402129409}
+  - component: {fileID: 5370807568546974482}
   m_Layer: 9
   m_Name: Troll1
   m_TagString: Enemy
@@ -352,20 +352,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5653656461402129422
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5653656461402129411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b0dec02d7b23f34b850e4831c9c8865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healt: 250
-  hitEffect: {fileID: 0}
 --- !u!114 &5653656461402129409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,3 +373,16 @@ MonoBehaviour:
   triggerArea: {fileID: 5653656460716030495}
   target: {fileID: 0}
   inRange: 0
+--- !u!114 &5370807568546974482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5653656461402129411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e88b33c201811145b703dab59eb0e14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healt: 250
