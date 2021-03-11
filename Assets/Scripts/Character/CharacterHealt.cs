@@ -13,19 +13,21 @@ public class CharacterHealt : MonoBehaviour
     private GameMaster gm;
     private ScoreManager scoreManager;
     private EnnemyFollow runnerGolem;
-    private void Start()
+
+    private void Awake()
     {
         anim = GetComponent<CharacterAnimationController>();
         rigid = GetComponent<Rigidbody2D>();
 
         runnerGolem = GameObject.FindGameObjectWithTag("EnemyRunner").GetComponent<EnnemyFollow>();
-        scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();       
-        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();        
-        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();
-
-        transform.position = gm.lastCheckPointPos;
-
-        playerCurrentHealt = scoreManager.data.playerMaxHealt;
+        scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
+        shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();
+        gm = GameObject.FindGameObjectWithTag("GameMaster").GetComponent<GameMaster>();        
+    }
+    private void Start()
+    {
+        transform.position = gm.lastCheckPointPos;              
+        playerCurrentHealt = scoreManager.data.playerMaxHealt; // setting a character healt from data 
     }
     void OnTriggerEnter2D(Collider2D other)
     {      

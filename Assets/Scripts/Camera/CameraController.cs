@@ -21,7 +21,7 @@ public class CameraController : MonoBehaviour
     {
         CheckMusic();
     }
-    void Update()
+    void LateUpdate()
     {
         Vector3 nextPos = new Vector3(Mathf.Clamp(player.position.x, minX, maxX),
             Mathf.Clamp(player.position.y, minY, maxY), transform.position.z);

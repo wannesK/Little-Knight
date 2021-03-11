@@ -20,13 +20,16 @@ public class CharacterCombatControl : MonoBehaviour
     private CharacterAnimationController animator;
     private ScoreManager scoreManager;
     private CharacterMovement characterMovement;
-    private void Start()
+
+    private void Awake()
     {
         animator = GetComponent<CharacterAnimationController>();
         characterMovement = GetComponent<CharacterMovement>();
         scoreManager = GameObject.FindGameObjectWithTag("Data").GetComponent<ScoreManager>();
-
-        basicAttackDamage = scoreManager.data.dataAttackDamage;
+    }
+    private void Start()
+    {     
+        basicAttackDamage = scoreManager.data.dataAttackDamage; // setting a character attack damage from data
         strikeDamage = scoreManager.data.dataStrikeDamage;
     }
     
@@ -35,9 +38,7 @@ public class CharacterCombatControl : MonoBehaviour
         BasicAttack();
         Strike();
     }
-    /// <summary>
-    /// This method is character basic attack 
-    /// </summary>
+
     public void BasicAttack ()
     {
         if (timeBtwnBasicAttack <= 0)
@@ -62,9 +63,6 @@ public class CharacterCombatControl : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// This method is character strike 
-    /// </summary>
     public void Strike()
     {
         if (timeBtwnStrike <= 0 && timeBtwnBasicAttack <= 0)

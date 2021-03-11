@@ -52,9 +52,6 @@ public class CharacterMovement : MonoBehaviour
         PlayAnimationsBasedOnState();        
     }
 
-    /// <summary>
-    /// This method handles movments
-    /// </summary>
     private void HandleMovement()
     {
         rigidBody2D.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -85,9 +82,7 @@ public class CharacterMovement : MonoBehaviour
             }
         }
     }
-    /// <summary>
-    /// This method handles jumping
-    /// </summary>
+
     private void HandleJumping ()
     {
         if (Input.GetKeyDown(KeyCode.W)&& IsGrounded())
@@ -96,10 +91,7 @@ public class CharacterMovement : MonoBehaviour
             MusicManager.PlaySound("Jump");
         }
     }
-   
-    /// <summary>
-    /// This method checking character touched the ground
-    /// </summary>
+
     private bool IsGrounded()
     {
         RaycastHit2D raycastHit2D = Physics2D.BoxCast(boxCollider2D.bounds.center,
@@ -108,9 +100,6 @@ public class CharacterMovement : MonoBehaviour
         return raycastHit2D.collider != null;    
     }
 
-    /// <summary>
-    /// This method setting character state
-    /// </summary>
     private void SetCharacterState ()
     {
         if (IsGrounded())
@@ -133,13 +122,9 @@ public class CharacterMovement : MonoBehaviour
         else
         {
             movementState = MovementStates.Jumping;
-        }       
-       
+        }              
     }
 
-    /// <summary>
-    /// This method set the character facing direction
-    /// </summary>
     private void SetCharacterDirection()
     {
         switch (facingDirection)
@@ -153,9 +138,6 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    /// <summary>
-    /// This method plays animations
-    /// </summary>
     private void PlayAnimationsBasedOnState()
     {
         switch (movementState)

@@ -7,7 +7,7 @@ public class EnemyHealt : MonoBehaviour
     private GameObject hitEffect;    
     private Shake shake;          // Camera Shake
     private Animator animator;
-    private void Start()
+    private void Awake()
     {
         animator = GetComponent<Animator>();
         shake = GameObject.FindGameObjectWithTag("ScreenShake").GetComponent<Shake>();

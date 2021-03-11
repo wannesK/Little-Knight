@@ -8,7 +8,6 @@ public class SlowMotion : MonoBehaviour
     }
     public void SlowTheTime()
     {
-
         if (Time.timeScale == 1.0f)
         {
             Time.timeScale = 0.3f;
